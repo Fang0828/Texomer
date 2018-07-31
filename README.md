@@ -40,7 +40,7 @@ Options:
   --version             show program's version number and exit
   -h, --help            Show this help message and exit.
   -p RSCRIPT, --Rscript=RSCRIPT
-                        the path of DACRE
+                        the path of Texomer
   -g GERMLINE, --germline=GERMLINE
                         You can input your own germline mutation file if no
                         -v. The file name of germline input file include 8
