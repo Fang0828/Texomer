@@ -192,67 +192,42 @@ Try Texomer in the package directory on the different example datasets
 	python Texomer.py -p ./ -t ./example/Tumor.bam -n ./example/Normal.bam -r ./example/RNA.bam -o ./res3
 
 
-*Texomer output:*
+**Texomer output:**
 
-output.summaryres.txt
+*output.summaryres.txt*
 
 	DNApurity	0.272030490933697
 	Heterogeneity	0.362166913670839
 	Ploidy	2.43420373296619
 	RNApurity	0.333623992547959
 
-output.segment.txt
+*output.segment.txt*
 
 	chr	start	end	Dmajor	Dminor	Rmajor	Rminor	RTEL	BayesP
 	chr1	12383	149854059	3	0	3	0	3	0.00271288011564652
 	chr1	149904572	151142541	11	0	11	0	11	0.00976386546342944
-	chr1	151242535	153818025	2	0	2	0	2	0.000597295774993456
-	chr1	153923949	158458304	3	0	7	1	7.66332510379357	0.999999999972296
-	chr1	158458909	164820155	3	0	3	0	3	0.0529930675747959
-	chr1	164984095	186977737	1	0	1	0	1	0.000118593403366063
-	chr1	187641566	248855548	2	0	2	0	2	0.0104407585632365
-	chr2	277314	242175216	2	0	2	0	2	0.00448976931165068
 
 Dmajor: Copy number of major allele
-
 Dminor: Copy number of minor allele
-
 Rmajor: Expressoin level of major allele
-
 Rminor: Expression level of minor allele
-
 RTEL: Total expression level of two alleles
-
 BayesP: Posterior probability that expression level is discordant with copy number
 
-output.mutations.txt
+*output.mutations.txt*
 
 	chr	pos	ref	alt	refNum	altNum	type	altD	altR	wildD	wildR	BayesP	eASEL	AEI	DACRE
 	chr1	14464	A	T	161	29	Germline	0	0.869112773207088	3	4.26647728279266	0.165069332450197	0.869112773207088	-2.29543007263941	-2.99135865987574
 	chr1	14677	G	A	562	275	Germline	0	0.565025922875357	3	3.23925254542283	0.0153830861293918	0.565025922875357	-2.51927198724942	-2.26822077283764
-	chr1	14907	A	G	31	55	Germline	0	1.46755414239337	3	0.0444198889562267	0.000196160197227124	1.46755414239337	5.0460641330148	1.82914010314698
-	chr1	14930	A	G	19	74	Germline	0	2.51062821238407	3	0.839923148663372	0.0025752700881877	-0.489371787615929	1.57971916697172	1.26469921401086
-	chr1	15118	A	G	22	17	Germline	0	0.662118740553368	3	1.44432611898557	0.000185221478464004	0.662118740553368	-1.12523465975723	-0.376201528722366
-	chr1	15211	T	G	14	33	Germline	3	2.90842246811015	0	0.0838658781010807	0.00685173702972997	-0.0915775318898535	5.11600908428328	2.41855074029923
 
 refNum: Read counts of reference allele from RNA-seq data
-
 altNum: Read counts of alernative allele from RNA-seq data
-
 type: the type of mutation Germline or Somatic
-
 altD: copy number of alternative allele
-
 altR: expression level of alternative allele
-
 wildD: copy number of reference allele (wildtype allele)
-
 wildR: expression level of reference allele (wildtype allele)
-
 BayesP: posterior probability that expression level is discordant with copy number
-
 eASEL: difference of alternative allele between expression and copy number (altR-altD)
-
 AEI: difference of expression levels between alternative and reference allele (altR-wildR)
-
 DACRE: DACRE score
