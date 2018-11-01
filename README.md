@@ -216,14 +216,4 @@ Try Texomer in the package directory on the different example datasets
 	chr1	14464	A	T	161	29	Germline	0	0.869112773207088	3	4.26647728279266	0.165069332450197	0.869112773207088	-2.29543007263941	-2.99135865987574
 	chr1	14677	G	A	562	275	Germline	0	0.565025922875357	3	3.23925254542283	0.0153830861293918	0.565025922875357	-2.51927198724942	-2.26822077283764
 
-refNum: Read counts of reference allele from RNA-seq data
-altNum: Read counts of alernative allele from RNA-seq data
-type: the type of mutation Germline or Somatic
-altD: copy number of alternative allele
-altR: expression level of alternative allele
-wildD: copy number of reference allele (wildtype allele)
-wildR: expression level of reference allele (wildtype allele)
-BayesP: posterior probability that expression level is discordant with copy number
-eASEL: difference of alternative allele between expression and copy number (altR-altD)
-AEI: difference of expression levels between alternative and reference allele (altR-wildR)
-DACRE: DACRE score
+>**refNum:** Read counts of reference allele from RNA-seq data. **altNum:** Read counts of alernative allele from RNA-seq data. **type:** the type of mutation Germline or Somatic. **altD:** copy number of alternative allele. **altR:** expression level of alternative allele. **wildD:** copy number of reference allele (wildtype allele). **wildR:** expression level of reference allele (wildtype allele). **BayesP:** posterior probability that expression level is discordant with copy number. **eASEL:** difference of alternative allele between expression and copy number (altR-altD). **AEI:** difference of expression levels between alternative and reference allele (altR-wildR). **DACRE:** DACRE score
