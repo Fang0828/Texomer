@@ -209,16 +209,11 @@ Try Texomer in the package directory on the different example datasets
 
 
 >Dmajor: Copy number of major allele
-
->Dminor: Copy number of minor allele
-
->Rmajor: Expressoin level of major allele
-
->Rminor: Expression level of minor allele
-
->RTEL: Total expression level of two alleles
-
->BayesP: Posterior probability that expression level is discordant with copy number
+Dminor: Copy number of minor allele
+Rmajor: Expressoin level of major allele
+Rminor: Expression level of minor allele
+RTEL: Total expression level of two alleles
+BayesP: Posterior probability that expression level is discordant with copy number
 
 *output.mutations.txt*
 
