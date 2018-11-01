@@ -196,7 +196,7 @@ Try Texomer in the package directory on the different example datasets
 
 *Example 2: Input varscan2 output*
 
-		python Texomer.py -p ./ -v ./example/varscan.snp -r ./example/RNA.bam -o ./res2
+	python Texomer.py -p ./ -v ./example/varscan.snp -r ./example/RNA.bam -o ./res2
 
 *Example 3: Input WES bam file*
 
@@ -225,13 +225,18 @@ output.segment.txt
 	chr2	277314	242175216	2	0	2	0	2	0.00448976931165068
 
 Dmajor: Copy number of major allele
+
 Dminor: Copy number of minor allele
+
 Rmajor: Expressoin level of major allele
+
 Rminor: Expression level of minor allele
+
 RTEL: Total expression level of two alleles
+
 BayesP: Posterior probability that expression level is discordant with copy number
 
-3. output.mutations.txt
+output.mutations.txt
 
 	chr	pos	ref	alt	refNum	altNum	type	altD	altR	wildD	wildR	BayesP	eASEL	AEI	DACRE
 	chr1	14464	A	T	161	29	Germline	0	0.869112773207088	3	4.26647728279266	0.165069332450197	0.869112773207088	-2.29543007263941	-2.99135865987574
@@ -242,13 +247,23 @@ BayesP: Posterior probability that expression level is discordant with copy numb
 	chr1	15211	T	G	14	33	Germline	3	2.90842246811015	0	0.0838658781010807	0.00685173702972997	-0.0915775318898535	5.11600908428328	2.41855074029923
 
 refNum: Read counts of reference allele from RNA-seq data
+
 altNum: Read counts of alernative allele from RNA-seq data
+
 type: the type of mutation Germline or Somatic
+
 altD: copy number of alternative allele
+
 altR: expression level of alternative allele
+
 wildD: copy number of reference allele (wildtype allele)
+
 wildR: expression level of reference allele (wildtype allele)
+
 BayesP: posterior probability that expression level is discordant with copy number
+
 eASEL: difference of alternative allele between expression and copy number (altR-altD)
+
 AEI: difference of expression levels between alternative and reference allele (altR-wildR)
+
 DACRE: DACRE score
