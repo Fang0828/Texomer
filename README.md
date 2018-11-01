@@ -42,9 +42,9 @@ Options:
   -p TEXOMER, --Texomer=TEXOMER
                         the path of Texomer
   -t TUMOR, --Tumor=TUMOR
-  						Tumor WES bam file
+										Tumor WES bam file
   -n NORMAL, --Normal=NORMAL
-  						Normal WES bam file
+											Normal WES bam file
   -o OUTPATH, --outpath=OUTPATH
                         the output path.
   -r RNA, --RNA=RNA     RNA-seq data bam file       
