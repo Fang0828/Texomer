@@ -166,16 +166,19 @@ Try Texomer in the package directory on the different example datasets
 	python Texomer.py -p ./ -g ./example/germline.input -s ./example/somatic.input.vcf -e ./example/RNA.SNV -o ./res1
 
 *germline.input:*
+
 	chr	pos	ref	alt	refNumN	altNumN	refNumT	altNumT
 	chr1	12198	G	C	51	40	26	25
 	chr1	12383	G	A	31	22	15	19
 
 *somatic.input:*
+
 	chr	pos	ref	alt	refNumN	altNumN	refNumT	altNumT
 	chr1	16757604	G	A	170	0	45	8
 	chr1	23083363	G	A	34	0	22	3
 
 *RNA.SNV:*
+
 	chr	pos	ref	alt	refNum	altNum	type
 	chr1	12198	G	C	8	0	germline
 	chr1	12383	G	A	2	0	germline
