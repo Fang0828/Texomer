@@ -208,8 +208,8 @@ Try Texomer in the package directory on the different example datasets
 	chr1	149904572	151142541	11	0	11	0	11	0.00976386546342944
 
 
->Dmajor: Copy number of major allele\n
-Dminor: Copy number of minor allele\n
+>Dmajor: Copy number of major allele\\n
+Dminor: Copy number of minor allele\\n
 Rmajor: Expressoin level of major allele\n
 Rminor: Expression level of minor allele\n
 RTEL: Total expression level of two alleles\n
