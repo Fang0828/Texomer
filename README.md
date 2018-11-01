@@ -161,44 +161,30 @@ Example
 =======
 Try Texomer in the package directory on the different example datasets
 
-*Example 1: Input defined mutation file*
+**Example 1: Input defined mutation file**
 
 	python Texomer.py -p ./ -g ./example/germline.input -s ./example/somatic.input.vcf -e ./example/RNA.SNV -o ./res1
 
-	*germline.input:*
+*germline.input:*
 	chr	pos	ref	alt	refNumN	altNumN	refNumT	altNumT
 	chr1	12198	G	C	51	40	26	25
 	chr1	12383	G	A	31	22	15	19
-	chr1	14210	G	A	19	7	13	5
-	chr1	14464	A	T	106	28	60	23
-	chr1	14677	G	A	251	68	121	87
-	chr1	14907	A	G	406	229	368	212
 
-	*somatic.input:*
+*somatic.input:*
 	chr	pos	ref	alt	refNumN	altNumN	refNumT	altNumT
 	chr1	16757604	G	A	170	0	45	8
 	chr1	23083363	G	A	34	0	22	3
-	chr1	43362219	C	T	52	0	30	19
-	chr1	85324885	T	A	56	0	39	8
-	chr1	109274629	C	G	103	0	78	26
-	chr1	112694707	C	T	41	0	36	3
-	chr1	119623040	G	A	48	0	30	3
 
-	*RNA.SNV:*
+*RNA.SNV:*
 	chr	pos	ref	alt	refNum	altNum	type
 	chr1	12198	G	C	8	0	germline
 	chr1	12383	G	A	2	0	germline
-	chr1	14210	G	A	7	0	germline
-	chr1	14464	A	T	161	29	germline
-	chr1	14677	G	A	562	275	germline
-	chr1	14907	A	G	31	55	germline
-	chr1	14930	A	G	19	74	germline
 
-*Example 2: Input varscan2 output*
+**Example 2: Input varscan2 output**
 
 	python Texomer.py -p ./ -v ./example/varscan.snp -r ./example/RNA.bam -o ./res2
 
-*Example 3: Input WES bam file*
+**Example 3: Input WES bam file**
 
 	python Texomer.py -p ./ -t ./example/Tumor.bam -n ./example/Normal.bam -r ./example/RNA.bam -o ./res3
 
