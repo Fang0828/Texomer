@@ -17,12 +17,12 @@ System requirements and dependency
 ==================================
 Texomer runs on a x86_64 Linux system. It depends on samtools and bedtools to extract reads covering variant sites from WTS data.
 
-It also requires R (version >= 3.2)
+It also requires R (version >= 3.4)
 to run and has dependency on the R packages:
 
 	bbmle, emdbook, copynumber,TitanCNA, facets, mixtools, ASCAT and Sequenza.
 
-These R packeages are already incorporated in this release. Users do not need to install them.
+***These R packeages are already incorporated in this release. Users do not need to install them.***
 
 Installation
 ============
@@ -251,4 +251,4 @@ wildR: expression level of reference allele (wildtype allele)
 BayesP: posterior probability that expression level is discordant with copy number
 eASEL: difference of alternative allele between expression and copy number (altR-altD)
 AEI: difference of expression levels between alternative and reference allele (altR-wildR)
-DACRE: DACRE score 
+DACRE: DACRE score
