@@ -52,7 +52,7 @@ Options:
   -r RNA, --RNA=RNA     RNA-seq data bam file       
   -g GERMLINE, --germline=GERMLINE
                         You can input your own germline mutation file together with
-												somatic mutation file (-s). The file include 8 columns:
+                        somatic mutation file (-s). The file include 8 columns:
                         chromosome, position, RefAllele, Altallele,
                         read counts of RefAllele in normal, read counts of
                         Altallele in normal, read counts of RefAllele in tumor
@@ -60,7 +60,7 @@ Options:
                         seperated by tab.
   -s SOMATIC, --somatic=SOMATIC
                         You can input your own somatic mutation file together with
-												germline mutation file (-g). The file include 8 columns:
+                        germline mutation file (-g). The file include 8 columns:
                         chromosome, position, RefAllele, Altallele, read
                         counts of RefAllele in normal, read counts of
                         Altallele in normal, read counts of RefAllele in tumor
