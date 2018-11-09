@@ -42,7 +42,7 @@ Options:
   -p TEXOMER, --Texomer=TEXOMER
                         the path of Texomer
   -I INPUT, --Input=INPUT
-	                      the form of input file: BAM, Varscan, and Defined									
+												the form of input file: BAM, Varscan, and Defined									
 	-t TUMOR, --Tumor=TUMOR
                         Tumor WES bam file.
   -n NORMAL, --Normal=NORMAL
