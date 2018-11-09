@@ -190,7 +190,7 @@ Try Texomer in the package directory on the different example datasets
 **Example 3: Input WES bam file**
 
 	python Texomer.py -p ./ -I BAM -t ./example/Tumor.bam -n ./example/Normal.bam -r ./example/RNA.bam -o ./res3
->The bam file should be alligned based on GRCH38. If you input bam file, Texomer will take more time to call mutation. 
+>The bam file should be alligned based on GRCH38. If you input bam file, Texomer will run longer because it needs to call mutation from bam file. 
 
 **Texomer output:**
 
