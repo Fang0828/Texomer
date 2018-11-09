@@ -145,7 +145,7 @@ Run Texomer:
 ***The python script for easy run of Texomer is in the release directory. You can tune the
 parameters as you wish.***
 
-	Python Texomer.py –p path/Texomer –I INPUT form [-t <tumor bam file> -n <normal bam file> -r <RNA bam file> -o <output path> -v <Varscan output> -g <Defined germline mutation input file> -s <Defined somatic mutation input file> -u <optimization> -e <Defined expression file of mutation>]
+	Python Texomer.py –p path/Texomer –I input form [-t <tumor bam file> -n <normal bam file> -r <RNA bam file> -o <output path> -v <Varscan output> -g <Defined germline mutation input file> -s <Defined somatic mutation input file> -u <optimization> -e <Defined expression file of mutation>]
 [...] contains required parameters corresponding to -I and optional parameters
 
 About the default parameters
@@ -190,7 +190,7 @@ Try Texomer in the package directory on the different example datasets
 **Example 3: Input WES bam file**
 
 	python Texomer.py -p ./ -I BAM -t ./example/Tumor.bam -n ./example/Normal.bam -r ./example/RNA.bam -o ./res3
-
+>The bam file should be alligned based on GRCH38. If you input bam file, Texomer will take more time to call mutation. 
 
 **Texomer output:**
 
