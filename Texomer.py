@@ -5,7 +5,7 @@ Created on May 23, 2017
 '''
 import sys,os,time
 import subprocess
-from optparse import OptionParser 
+from optparse import OptionParser
 from tempfile import gettempdir
 def VarscanTrans(varscan,case):
     data=open(varscan)
@@ -33,6 +33,9 @@ def VarscanTrans(varscan,case):
         pgerm=float(line[13])
         psoma=float(line[14])
         if type == "Germline" and gt not in ["A","C","G","T"] and pgerm < 0.01:
+            out=chr+"\t"+position+"\t"+ref+"\t"+var+"\t"+refNumN+"\t"+altNumN+"\t"+refNumT+"\t"+altNumT
+            print >> germlineout,out
+        if type == "LOH" and psoma < 0.01:
             out=chr+"\t"+position+"\t"+ref+"\t"+var+"\t"+refNumN+"\t"+altNumN+"\t"+refNumT+"\t"+altNumT
             print >> germlineout,out
         if type == "Somatic" and psoma < 0.01:
@@ -191,7 +194,7 @@ def getPath(path):
 
 
 def main():
-    usage = "usage: python %prog -p <Texomer path> -I <input form> [-t <tumor bam file>] [-n <normal bam file>] [-r <RNA bam file>] [-v <Variscan mutation calling output>] [-g <Defiend germline mutation input file>] [-s <Defined somatic mutation input file>] [-o <output path>] [-u <Optimazing>] [-e <Defined expression file of mutation>]"
+    usage = "usage: python %prog -p <Texomer path> -I <input form> [-t <tumor bam file>] [-n <normal bam file>] [-r <RNA bam file>] [-v <Variscan mutation calling output>] [-g <Defiend germline mutation input file>] [-s <Defined somatic mutation input file>] [-o <output path>] [-u <optimization>] [-e <Defined expression file of mutation>]"
     description = "The path of Texomer and the form of input file are required in Texomer. Three forms of input file are allowed: BAM, Varscan and Defined. If -I BAM is selected, -t and -n are required. Texomer requires bam file is alligned based on GRCH38. If -I Varscan is selected, -v is required. If -I Defined is selected, -g and -s are required. RNA-seq bam file is optional for Texomer. Texomer would do estimation only at DNA level if without RNA data input."
     op = OptionParser(version="%prog 0.1",description=description,usage=usage,add_help_option=False)
     op.add_option("-h","--help",action="help",
@@ -350,17 +353,13 @@ def main():
     os.chdir(outpath)
     os.system("rm -r temp")
 
-    
+
 
 
 if __name__ == "__main__":
-    
+
     try:
         main()
     except KeyboardInterrupt:
         sys.stderr.write("User interrupt me, see you!\n")
-        sys.exit(0)    
-
-
-
-
+        sys.exit(0)
