@@ -145,9 +145,8 @@ Run Texomer:
 ***The python script for easy run of Texomer is in the release directory. You can tune the
 parameters as you wish.***
 
-	Python Texomer.py –p path/Texomer –I input form [-t <tumor bam file> -n <normal bam file> -r <RNA bam file> -o <output path> -v <Varscan output> -g <Defined germline mutation input file> -s <Defined somatic mutation input file> -u <optimization> -e <Defined expression file of mutation>]
-[...] contains required parameters corresponding to -I and optional parameters
-
+	Python Texomer.py [-t <tumor bam file>] [-n <normal bam file>] [-r <RNA bam file>] [-o <output path>] [-v <Varscan output>] [-g <Defined germline mutation input file>] [-s <Defined somatic mutation input file>] [-u <optimization>] [-e <Defined expression file of mutation>] –p <Texomer path> –I <input form>
+[...] contains optional parameters. The mandatory arguments are -p and -I. The form of input includes BAM, Varscan, and Defined.
 About the default parameters
 ========================
 Texomer optimizes estimation of tumor purity and allele specific copy numbers by combining both germline SNPs and somatic SNVs.
@@ -186,6 +185,9 @@ Try Texomer in the package directory on the different example datasets
 **Example 2: Input varscan2 output**
 
 	python Texomer.py -p ./ -I Varscan -v ./example/varscan.snp -r ./example/RNA.bam -o ./res2
+
+	***All example data of bam files are not provided on GitHub because of the limitation of file size.***
+
 
 **Example 3: Input WES bam file**
 
